@@ -53,7 +53,8 @@ struct bmp_header_map *bmp_get_header_map(FILE *bmp){
 
 /* This method get the vector of colors*/
 struct RGB *bmp_get_colors(FILE *bmp, int width, int height){
-	struct RGB *rgb = (struct RGB*) malloc(sizeof(struct RGB)*width*height);
+	struct RGB *rgb = 0;
+	rgb = (struct RGB*) malloc(sizeof(struct RGB)*width*height);
 	bzero(rgb, sizeof(struct RGB));
 	fread(rgb, width*height*3, 1, bmp);
 

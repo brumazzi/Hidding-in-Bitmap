@@ -46,7 +46,7 @@ typedef struct bitmap Bitmap;
 
 extern Bitmap *bmp_read(const char *fname); // read bitmap files
 extern char bmp_write(const char *fname, Bitmap *bmp); // write bitmap files
-extern char *bmp_rgb_to_pchar(struct RGB *rgb, long long int size); // convert RGB to char vector
+extern char *bmp_rgb_to_pchar(struct RGB *rgb); // convert RGB to char vector
 
 #endif  // BMP_H*/
 #pragma pack(pop)
